@@ -42,8 +42,8 @@ class App extends Component {
       //Assign contract
       const supplychain = new web3.eth.Contract(SupplyChain.abi, networkData.address)
       this.setState({supplychain})
-     // const sayhello = await supplychain.methods.sayHello().call()
-      //window.alert(sayhello)
+     const sayhello = await supplychain.methods.sayHello().call()
+      window.alert(sayhello)
       //Get files amount
 
       //Load files&sort by the newest
@@ -140,6 +140,7 @@ class App extends Component {
             />
       </div>
     );
+
   }
 }
 
